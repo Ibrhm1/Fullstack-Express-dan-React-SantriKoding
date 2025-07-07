@@ -12,7 +12,7 @@ git clone https://github.com/Ibrhm1/Fullstack-Express-dan-React-SantriKoding.git
 ```
 
 ```bash
-cd <nama-folder-repo>
+cd Fullstack-Express-dan-React-SantriKoding
 ```
 
 ## 📦 Setup Backend (Express Js)
