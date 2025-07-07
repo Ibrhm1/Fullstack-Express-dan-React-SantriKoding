@@ -16,15 +16,13 @@ cd <nama-folder-repo>
 
 ### Masuk ke folder backend:
 
-```
-bash
+```bash
 cd backend-express
 ```
 
 ### Install Dependencies
 
-```
-bash
+```bash
 npm install
 ```
 
@@ -33,20 +31,73 @@ npm install
 Buat file .env berdasarkan .env.example:
 
 ```
-bash
 cp .env.example .env
 ```
 
 Edit isi file .env sesuai dengan konfigurasi database kamu:
 
-```
-env
+```env
 DATABASE_URL="mysql://username:password@localhost:3306/nama_database"
 ```
 
 Edit isi file .env untuk menambahkan Secret Key menggunakan jwt, jalankan perintah beriku:
 
-```
-bash
+```bash
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
+
+Jika berhasil akan mendapatkan kode random. Setelah itu, tambahkan ke file .env
+
+```env
+DATABASE_URL="mysql://username:password@localhost:3306/nama_database"
+JWT_SECRET=paste_kode_random_hasil_generate
+```
+
+### Prisma (ORM)
+
+Inisialisasi dan migrasi schema Prisma:
+
+```bash
+npx prisma migrate dev --name init
+npx prisma generate
+```
+
+Jalankan Server
+
+```bash
+npm start
+```
+
+## Setup Frontend (React Js)
+
+### Masuk ke folder frontend:
+
+```bash
+cd Frontend-react
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Jalankan Aplikasi React
+
+```bash
+npm run dev
+```
+
+## 🛠️ Fitur Utama
+
+- Autentikasi (Login/Register)
+- CRUD Data
+- API terstruktur dengan Express Router
+- Validasi menggunakan express-validator
+- Frontend modern dengan React + Axios
+
+## 🔗 Tools dan Teknologi
+
+- Frontend: React, Vite, Axios, Bootstap 5, js-cookie, react-router-dom
+- Backend: Express.js, Prisma ORM, MySQL, Express-Validator
+- Auth: JWT, Bcrypt
