@@ -4,11 +4,14 @@ Proyek ini adalah contoh implementasi Fullstack Web App menggunakan Express.js s
 
 ## 🚀 Get Started
 
-Clone Repo
+Clone repository
 
 ```
 bash
-git clone <https://github.com/Ibrhm1/Ibrhm1-Ibrhm1-Fullstack-Express-dan-React-SantriKoding.git>
+git clone https://github.com/Ibrhm1/Fullstack-Express-dan-React-SantriKoding.git
+```
+
+```bash
 cd <nama-folder-repo>
 ```
 
